@@ -1,0 +1,54 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:lab4.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+		Width ="450" Height="450"
+        x:Class="lab4.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="lab4">
+
+	<Window.Styles>
+		<Style Selector="Button.buttons">
+			<Setter Property="FontSize" Value="36"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Stretch"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+		</Style>
+	</Window.Styles>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<TextBox Name="textBox" Text="{Binding TextShow}" FontSize="66" Focusable="False" IsUndoEnabled="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"> </TextBox>
+
+		<Button Classes="buttons" Name="button1" Command="{Binding OnClickCommand}" CommandParameter="I" Grid.Row="1" Grid.Column="0">I</Button>
+		<Button Classes="buttons" Name="button2" Command="{Binding OnClickCommand}" CommandParameter="L" Grid.Row="1" Grid.Column="1">L</Button>
+		<Button Classes="buttons" Name="button3" Command="{Binding OnClickCommand}" CommandParameter="M" Grid.Row="1" Grid.Column="2">M</Button>
+		<Button Classes="buttons" Name="button4" Command="{Binding OnClickCommand}" CommandParameter="*" Grid.Row="1" Grid.Column="3">*</Button>
+
+		<Button Classes="buttons" Name="button5" Command="{Binding OnClickCommand}" CommandParameter="V" Grid.Row="2" Grid.Column="0">V</Button>
+		<Button Classes="buttons" Name="button6" Command="{Binding OnClickCommand}" CommandParameter="C" Grid.Row="2" Grid.Column="1">C</Button>
+		<Button Classes="buttons" Name="button7" Command="{Binding OnClickCommand}" CommandParameter="+" Grid.Row="2" Grid.Column="2">+</Button>
+		<Button Classes="buttons" Name="button8" Command="{Binding OnClickCommand}" CommandParameter="/" Grid.Row="2" Grid.Column="3">/</Button>
+
+		<Button Classes="buttons" Name="button9"  Command="{Binding OnClickCommand}" CommandParameter="X"  Grid.Row="3" Grid.Column="0">X</Button>
+		<Button Classes="buttons" Name="button10" Command="{Binding OnClickCommand}" CommandParameter="D"  Grid.Row="3" Grid.Column="1">D</Button>
+		<Button Classes="buttons" Name="button11" Command="{Binding OnClickCommand}" CommandParameter="-"  Grid.Row="3" Grid.Column="2">-</Button>
+		<Button Classes="buttons" Name="button12" Command="{Binding OnClickCommand}" CommandParameter="="  Grid.Row="3" Grid.Column="3">=</Button>
+	</Grid>
+
+</Window>
